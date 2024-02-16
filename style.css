@@ -11,12 +11,11 @@
 header,
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-}
-
-header{
     position: relative;
+    min-width: 545px;
+    margin: 0 auto;
 }
 
 .header-img{
@@ -34,4 +33,38 @@ header{
     color: #fff;
     margin-right: 21em;
     margin-top: 2em;
+}
+
+
+/* ======= main ======== */
+
+.cart{
+    margin-top: 5.4em;
+    margin-left: 30em;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+    padding-bottom: 1.2em;
+    margin-top: 2em;
+    border-bottom: 2px solid #b8b8b8;
+}
+
+.item-container{
+    display: flex;
+}
+
+.add-to-cart{
+    border-radius: 50%;
+    border: 1px solid #e4e4e4;
+    font-size: 2em;
+    width: 10%;
+    background-color: #fff;
+}
+
+.item-image{
+    font-size: 3em;
+    margin-right: .6em;
 }
