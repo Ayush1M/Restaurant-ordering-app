@@ -1,4 +1,5 @@
 import menuArray from "./data.js";
+import { cart, addToCart } from "./cart.js";
 
 let menuArrayHtml = "";
 
@@ -13,9 +14,27 @@ menuArray.forEach((menu) => {
               <p class="item-price">$${menu.price}</p>
          </div>
         </div>
-      <button class="add-to-cart">+</button>
+      <button class="add-to-cart js-add-to-cart" data-product-id="${menu.id}">+</button>
     </div>
     `;
 });
 
 document.querySelector(".menu-item").innerHTML = menuArrayHtml;
+
+function updateCartQuantity(){
+  
+  let cartQuantity = 0
+
+  cart.forEach((item) =>{
+    cartQuantity += item.quantity
+  })
+  document.querySelector(".js-cart-quantity").innerHTML = cartQuantity
+}
+
+document.querySelectorAll(".js-add-to-cart").forEach((button) =>{
+  button.addEventListener("click", ()=>{
+    const productId = button.dataset.productId
+    addToCart(productId)
+    updateCartQuantity()
+  })
+})
