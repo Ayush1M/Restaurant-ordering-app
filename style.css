@@ -87,3 +87,29 @@ main{
     font-size: 3em;
     margin-right: .6em;
 }
+
+
+/* ======= checkout page ======= */
+
+.checkout-page{
+    width: 30%;
+    margin-top: 5em;
+    min-width: 460px;
+}
+
+.food-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-image{
+    font-size: 5em;
+    margin-right: .2em;
+}
