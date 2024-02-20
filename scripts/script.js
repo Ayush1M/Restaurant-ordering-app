@@ -14,7 +14,7 @@ menuArray.forEach((menu) => {
               <p class="item-price">$${menu.price}</p>
          </div>
         </div>
-      <button class="add-to-cart js-add-to-cart" data-product-id="${menu.id}">+</button>
+      <button class="add-to-cart js-add-to-cart" data-food-id="${menu.id}">+</button>
     </div>
     `;
 });
@@ -29,12 +29,13 @@ function updateCartQuantity(){
     cartQuantity += item.quantity
   })
   document.querySelector(".js-cart-quantity").innerHTML = cartQuantity
+  
 }
 
-document.querySelectorAll(".js-add-to-cart").forEach((button) =>{
-  button.addEventListener("click", ()=>{
-    const productId = button.dataset.productId
-    addToCart(productId)
+document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
+  button.addEventListener("click" , ()=>{
+    const foodId = button.dataset.foodId
+    addToCart(foodId)
     updateCartQuantity()
   })
 })
