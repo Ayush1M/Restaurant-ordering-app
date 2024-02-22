@@ -15,8 +15,8 @@ menuArray.forEach((menu) => {
          </div>
         </div>
         <div class="added-container">
-        <div class="added-to-cart js-added-to-cart-${menu.id}">Added</div>
-        <button class="add-to-cart js-add-to-cart" data-food-id="${menu.id}">Add +</button>
+        <div class="added-to-cart js-added-to-cart-${menu.id}"><img src="./images/checkmark.png" alt="checkmark" class="checkmark" />Added</div>
+        <button class="add-to-cart js-add-to-cart" data-food-id="${menu.id}"> Add +</button>
         </div>
     </div>
     `;

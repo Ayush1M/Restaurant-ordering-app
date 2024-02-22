@@ -91,10 +91,16 @@ main{
 .added-to-cart{
     color: rgb(6, 125, 98);
     opacity: 0;
+    display: flex;
+    align-items: center;
 }
 
 .added-message{
     opacity: 1;
+}
+
+.checkmark{
+    width: 30%;
 }
 
 .item-image{
