@@ -70,10 +70,9 @@ main{
 }
 
 .add-to-cart{
-    border-radius: 50%;
     border: 1px solid #e4e4e4;
-    font-size: 2em;
-    width: 10%;
+    font-size: 1.4em;
+    padding: .5em .8em;
     background-color: #fff;
     cursor: pointer;
 }
@@ -81,6 +80,21 @@ main{
 .add-to-cart:hover{
     background-color: #000;
     color: #fff;
+}
+
+.added-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.added-to-cart{
+    color: rgb(6, 125, 98);
+    opacity: 0;
+}
+
+.added-message{
+    opacity: 1;
 }
 
 .item-image{

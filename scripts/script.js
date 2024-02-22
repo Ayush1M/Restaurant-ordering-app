@@ -14,7 +14,10 @@ menuArray.forEach((menu) => {
               <p class="item-price">$${menu.price}</p>
          </div>
         </div>
-      <button class="add-to-cart js-add-to-cart" data-food-id="${menu.id}">+</button>
+        <div class="added-container">
+        <div class="added-to-cart js-added-to-cart-${menu.id}">Added</div>
+        <button class="add-to-cart js-add-to-cart" data-food-id="${menu.id}">Add +</button>
+        </div>
     </div>
     `;
 });
@@ -37,5 +40,10 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
     const foodId = button.dataset.foodId
     addToCart(foodId)
     updateCartQuantity()
+
+    const addedMessage = document.querySelector(`.js-added-to-cart-${foodId}`)
+    addedMessage.classList.add("added-message")
+
+    setTimeout(() => {addedMessage.classList.remove("added-message")}, 1000)
   })
 })
