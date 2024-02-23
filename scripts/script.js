@@ -1,5 +1,5 @@
 import menuArray from "./data.js";
-import { cart, addToCart } from "./cart.js";
+import { cart, addToCart, saveToStorage } from "./cart.js";
 
 let menuArrayHtml = "";
 
@@ -32,14 +32,15 @@ function updateCartQuantity(){
     cartQuantity += item.quantity
   })
   document.querySelector(".js-cart-quantity").innerHTML = cartQuantity
-  
 }
+updateCartQuantity()
 
 document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
   button.addEventListener("click" , ()=>{
     const foodId = button.dataset.foodId
     addToCart(foodId)
     updateCartQuantity()
+    saveToStorage()
 
     const addedMessage = document.querySelector(`.js-added-to-cart-${foodId}`)
     addedMessage.classList.add("added-message")

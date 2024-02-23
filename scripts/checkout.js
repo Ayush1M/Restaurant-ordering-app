@@ -12,7 +12,6 @@ cart.forEach((item) => {
       matchedItem = menuItem;
     }
   });
-  console.log(matchedItem);
 
   cartSummaryHtml += 
   `
