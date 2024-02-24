@@ -1,5 +1,6 @@
 import { cart, removeFromCart} from "./cart.js";
 import menuArray from "./data.js";
+import { paymentSummary } from "./paymentsummary.js";
 
 let cartSummaryHtml = "";
 
@@ -29,6 +30,7 @@ cart.forEach((item) => {
 });
 
 document.querySelector(".js-checkout-page").innerHTML = cartSummaryHtml;
+paymentSummary()
 
 document.querySelectorAll('.js-delete-link').forEach((link) =>{
   link.addEventListener("click" , ()=>{
@@ -37,5 +39,6 @@ document.querySelectorAll('.js-delete-link').forEach((link) =>{
 
     const container = document.querySelector(`.js-checkout-container-${foodId}`)
     container.remove()
+    paymentSummary()
   })
 })

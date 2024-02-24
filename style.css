@@ -139,3 +139,20 @@ main{
     cursor: pointer;
     font-size: 1.1em;
 }
+
+
+/* ======= payment ======= */
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    align-items: center;
+    gap: 10em;
+}
+
+.payment-items,
+.payment-total{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em;
+}

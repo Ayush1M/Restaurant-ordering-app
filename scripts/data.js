@@ -1,4 +1,16 @@
-const menuArray = [
+export function getFood(foodId){
+    let matchedItem
+
+  menuArray.forEach((menuItem) => {
+    if (foodId === menuItem.id) {
+      matchedItem = menuItem;
+    }
+  });
+  return matchedItem
+}
+
+
+export const menuArray = [
     {
         name: "Pizza",
         ingredients: ["pepperoni", "mushrom", "mozarella"],
