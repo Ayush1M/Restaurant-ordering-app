@@ -8,7 +8,20 @@
     box-sizing: border-box;
 }
 
-header,
+:root{
+    --clr-light-gray : #f5f5f5;
+    --clr-white : #fff;
+    --clr-red : #eb3254;
+    --clr-black : #2b2626;
+    --clr-green : rgb(6, 125, 98);
+    --clr-gray : #bbbbbb;
+}
+
+body{
+    background-color: var(--clr-light-gray);
+    font-family: "Poppins", sans-serif;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -19,7 +32,7 @@ main{
 
 .header-img{
     position: absolute;
-    width: 580px;
+    width: 544px;
     height: 167px;
     object-fit: cover;
     top: 0;
@@ -29,8 +42,8 @@ main{
 
 .heading{
     fill: currentColor;
-    color: #fff;
-    margin-right: 21em;
+    color: var(--clr-gray);
+    margin-right: 14em;
     margin-top: 2em;
 }
 
@@ -51,8 +64,8 @@ main{
     top: 6em;
     right: .1em;
     font-size: 1em;
-    padding: .7em;
-    background-color: #bbbbbb;
+    padding: .65em;
+    background-color: var(--clr-gray);
     border-radius: 50%;
 }
 
@@ -61,9 +74,11 @@ main{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3em;
-    padding-bottom: 1.2em;
+    padding: 1.2em;
     margin-top: 2em;
-    border-bottom: 2px solid #b8b8b8;
+    border-radius: 10px;
+    border: 2px solid #b8b8b8;
+    background-color: var(--clr-white);
 }
 
 .item-container{
@@ -71,16 +86,17 @@ main{
 }
 
 .add-to-cart{
-    border: 1px solid #e4e4e4;
+    border: 1px solid var(--clr-light-gray);
     font-size: 1.4em;
     padding: .5em .8em;
-    background-color: #fff;
+    background-color: var(--clr-red);
+    color: var(--clr-white);
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .add-to-cart:hover{
-    background-color: #000;
-    color: #fff;
+    opacity: .8;
 }
 
 .added-container{
@@ -90,7 +106,7 @@ main{
 }
 
 .added-to-cart{
-    color: rgb(6, 125, 98);
+    color: var(--clr-green);
     opacity: 0;
     display: flex;
     align-items: center;
@@ -128,6 +144,15 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid var(--clr-gray);
+    border-radius: 10px;
+    margin-bottom: 1em;
+    padding: .4em 2em;
+    background-color: var(--clr-white);
+}
+
+.food-quantity{
+    font-size: 1.4em;
 }
 
 .food-image{
@@ -143,12 +168,6 @@ main{
 
 /* ======= payment ======= */
 
-.grid{
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    align-items: center;
-    gap: 10em;
-}
 
 .payment-items,
 .payment-total{
@@ -156,3 +175,29 @@ main{
     justify-content: space-between;
     font-size: 1.4em;
 }
+
+.payment-container{
+    margin: 2.85em 0;
+    border: 1px solid var(--clr-gray);
+    padding: 1.8em 1.2em;
+    background-color: var(--clr-white);
+    border-radius: 10px;
+}
+
+.payment-btn{
+    width: 100%;
+    padding: .6em 0;
+    font-size: 1.2em;
+    margin-top: 1em;
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.payment-btn:hover{
+    opacity: .8;
+}
+

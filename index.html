@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant ordering App</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <Header>
-        <img src="./images/header-image.jpg" class="header-img"  alt="">
+    <main>
+        <img src="./images/header-image.png" class="header-img"  alt="">
         <div class="heading">
             <h1>Ayush's Diner</h1>
             <p>The best burgers and pizza in town.</p>
-        </div>
-    </Header>
-
-    <main>
-        <div>
-            <img src="./images/cart-icon.png" alt="cart icon" class="cart">
+         </div>
+        <div class="cart-container">
+            <span class="cart-quantity js-cart-quantity">0</span>
+            <a href="checkout.html"><img src="./images/cart-icon.png" alt="cart icon" class="cart"></a>
             <div class="menu-item"></div>
         </div>
     </main>
 
-    <script src="script.js" type="module"></script>
+    <script src="scripts/script.js" type="module"></script>
 </body>
 </html>
 
