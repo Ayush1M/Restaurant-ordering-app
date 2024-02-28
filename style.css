@@ -15,11 +15,13 @@
     --clr-black : #2b2626;
     --clr-green : rgb(6, 125, 98);
     --clr-gray : #bbbbbb;
+
+    --clr-ff : "Poppins", sans-serif;
 }
 
 body{
     background-color: var(--clr-light-gray);
-    font-family: "Poppins", sans-serif;
+    font-family: var(--clr-ff)
 }
 
 main{
@@ -128,8 +130,31 @@ main{
 
 /* ======= checkout page ======= */
 
-.checkout-page{
+.home-btn{
+    position: absolute;
+    top: 12em;
+    background-color: var(--clr-red);
+    padding: .6em .4em;
+    text-decoration: none;
+    color: var(--clr-white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.home-btn:hover{
+    opacity: .8;
+}
+
+.back-btn{
     width: 30%;
+}
+
+.checkout-cart{
+    margin-top: 10em;
+}
+
+.checkout-page{
     margin-top: 5em;
     min-width: 460px;
 }
@@ -177,7 +202,7 @@ main{
 }
 
 .payment-container{
-    margin: 2.85em 0;
+    margin: 4em 0;
     border: 1px solid var(--clr-gray);
     padding: 1.8em 1.2em;
     background-color: var(--clr-white);
@@ -194,7 +219,7 @@ main{
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--clr-ff);
 }
 
 .payment-btn:hover{
