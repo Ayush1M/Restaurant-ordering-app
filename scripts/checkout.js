@@ -42,3 +42,15 @@ document.querySelectorAll('.js-delete-link').forEach((link) =>{
     paymentSummary()
   })
 })
+
+const payment = document.querySelector(".payment-details")
+const closeBtn = document.querySelector(".close-btn")
+
+document.querySelector(".js-payment-btn").addEventListener("click" , () =>{
+  payment.style.display = "block"
+})
+
+closeBtn.addEventListener("click" , (e) =>{
+  e.preventDefault()
+  payment.style.display = "none"
+})

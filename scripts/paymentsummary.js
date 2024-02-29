@@ -27,7 +27,7 @@ export function paymentSummary(){
                <p>Total : </p>
                <p>$${foodPrice}</p>
            </div>
-           <button class="payment-btn">Complete your order</button>
+           <button class="payment-btn js-payment-btn">Complete your order</button>
            </div>
     `
     document.querySelector(".js-payment-summary").innerHTML = paymentSummary

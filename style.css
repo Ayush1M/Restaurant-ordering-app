@@ -21,8 +21,10 @@
 
 body{
     background-color: var(--clr-light-gray);
-    font-family: var(--clr-ff)
+    font-family: var(--clr-ff);
 }
+
+
 
 main{
     display: flex;
@@ -209,7 +211,8 @@ main{
     border-radius: 10px;
 }
 
-.payment-btn{
+.payment-btn,
+.pay-btn{
     width: 100%;
     padding: .6em 0;
     font-size: 1.2em;
@@ -224,5 +227,54 @@ main{
 
 .payment-btn:hover{
     opacity: .8;
+}
+
+
+/* ====== form page ========*/
+
+.payment-details{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 30%;
+    display: none;
+    background-color: var(--clr-white);
+    width: 40%;
+    margin: 0 auto;
+    padding: 4em 0;
+    
+}
+
+.payment-details-heading{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+input{
+    padding: 1em 0;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    border-radius: 10px;
+    border: 1px solid var(--clr-gray);
+}
+
+input[type="text"],
+input[type="number"]{
+    padding-left: 1em;
+}
+
+.close-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
