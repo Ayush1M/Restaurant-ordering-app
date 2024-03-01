@@ -36,10 +36,11 @@ document.querySelectorAll('.js-delete-link').forEach((link) =>{
   link.addEventListener("click" , ()=>{
     const foodId = link.dataset.foodId
     removeFromCart(foodId)
-
+    
     const container = document.querySelector(`.js-checkout-container-${foodId}`)
     container.remove()
     paymentSummary()
+    cartEmpty()
   })
 })
 
@@ -54,3 +55,15 @@ closeBtn.addEventListener("click" , (e) =>{
   e.preventDefault()
   payment.style.display = "none"
 })
+
+function cartEmpty(){
+  const emptyCart = document.querySelector(".js-empty-cart")
+
+  if(cart.length > 0){
+    emptyCart.style.display = "none"
+  }else if(cart.length < 1){
+    emptyCart.style.display = "block"
+  }
+  
+}
+cartEmpty()
