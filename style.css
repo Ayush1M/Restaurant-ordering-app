@@ -197,7 +197,8 @@ main{
 
 
 .payment-items,
-.payment-total{
+.payment-total, 
+.tax{
     display: flex;
     justify-content: space-between;
     font-size: 1.4em;
