@@ -3,12 +3,11 @@ import { getFood } from "./data.js"
 
 export function paymentSummary(){
     let cartQuantity = 0
+    let foodPrice = 0
 
     cart.forEach((cartItem) => {
         cartQuantity += cartItem.quantity
     })
-
-    let foodPrice = 0
 
     cart.forEach((cartItem) => {
         const foodId = cartItem.foodId
@@ -28,8 +27,14 @@ export function paymentSummary(){
                <p>$${foodPrice}</p>
            </div>
            <button class="payment-btn js-payment-btn">Complete your order</button>
-           </div>
+        </div>
     `
     document.querySelector(".js-payment-summary").innerHTML = paymentSummary
+
+    const paymentContainer = document.querySelector(".payment-container")
+
+    if(cart.length > 0){
+        paymentContainer.style.display = "block"
+    }
 }
 paymentSummary()

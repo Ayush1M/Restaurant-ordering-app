@@ -209,6 +209,7 @@ main{
     padding: 1.8em 1.2em;
     background-color: var(--clr-white);
     border-radius: 10px;
+    display: none;
 }
 
 .payment-btn,
