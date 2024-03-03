@@ -13,6 +13,8 @@ A Restaurant Ordering app made with the concepts of Javascript which consists of
 
 ## Screenshot
 
+<p align="center"><img src="./images/screenshot.png" width="400px"/><img src="./images/screenshot2.png" width="400px"/><img src="./images/screenshot3.png" width="400px"/><img src="./images/screenshot4.png" width="400px"/></p>
+
 ## Technologies I Used
 
 * HTML
