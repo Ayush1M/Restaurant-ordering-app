@@ -46,6 +46,8 @@ document.querySelectorAll('.js-delete-link').forEach((link) =>{
 
 const payment = document.querySelector(".payment-details")
 const closeBtn = document.querySelector(".close-btn")
+const paymentForm = document.getElementById("payment-form")
+const paymentMessagePara = document.getElementById("payment-message-para")
 
 document.querySelector(".js-payment-btn").addEventListener("click" , () =>{
   payment.style.display = "block"
@@ -58,12 +60,28 @@ closeBtn.addEventListener("click" , (e) =>{
 
 function cartEmpty(){
   const emptyCart = document.querySelector(".js-empty-cart")
+  const HomeBtn = document.querySelector(".js-home-btn")
 
   if(cart.length > 0){
     emptyCart.style.display = "none"
   }else if(cart.length < 1){
     emptyCart.style.display = "block"
+    HomeBtn.style.display = "none"
   }
   
 }
 cartEmpty()
+
+paymentForm.addEventListener("submit" , (e)=> {
+  e.preventDefault()
+  const paymentFormData = new FormData(paymentForm)
+  const name = paymentFormData.get("name")
+  
+  paymentForm.style.display = "none"
+  paymentMessagePara.style.display = "block"
+
+  const payment = document.createElement("div")
+  payment.classList.add("payment-message")
+  paymentMessagePara.appendChild(payment)
+  payment.textContent = `Thanks, ${name}! Your order is on its way!`
+})

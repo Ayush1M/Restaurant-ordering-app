@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete your order</title>
     <link rel="stylesheet" href="style.css">
-
+    <!-- added google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
 </head>
 <body>
     <main>
@@ -18,7 +20,7 @@
             <p>The best burgers and pizza in town.</p>
         </div>
         <div>
-            <a href="index.html" class="home-btn"> <img src="./images/back-btn.png" alt="back button" class="back-btn">Home</a>
+            <a href="index.html" class="home-btn js-home-btn"> <img src="./images/back-btn.png" alt="back button" class="back-btn">Add more items</a>
             <div class="checkout-cart">
                 <h2 class="empty-cart js-empty-cart">Cart is empty. Add items from <div class="menu-btn"><a href="index.html">Menu</a></div></h2>
                 <div class="checkout-page js-checkout-page"></div>
@@ -27,16 +29,19 @@
         </div>
 
         <div class="payment-details">
-            <form>
+            <button class="close-btn"><img src="./images/close-btn.png" alt="close button"></button>
+            <form id="payment-form">
                 <div class="payment-details-heading">
                     <h2>Enter card details</h2>
-                    <button class="close-btn"><img src="./images/close-btn.png" alt="close button"></button>
                 </div>
                 <input type="text" name="name" placeholder="Enter your name" required>
                 <input type="number" name="card-number" placeholder="Enter card number" required>
                 <input type="number" name="cvv" placeholder="Enter cvv" required>
-                <button class="pay-btn">Pay</button>
+                <button class="pay-btn" type="submit">Pay</button>
             </form>
+            <div class="payment-message-para" id="payment-message-para">
+                <img src="./images/fast-delivery.png" alt="">
+            </div>
         </div>
     </main>
 
